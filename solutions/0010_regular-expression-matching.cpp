@@ -1,0 +1,75 @@
+// LeetCode Solution: Regular Expression Matching
+// Runtime: 4 ms | Memory: 8.9 MB
+// Tags: Recursion, String, Dynamic Programming
+// --------------------------------------------------
+// Personal Approach Notes:
+//   - Approach: [Solution strategy and key ideas]
+//   - Time Complexity: [O(...) - analyze]
+//   - Space Complexity: [O(...) - analyze]
+//   - Key Insights: [Observations and potential pitfalls]
+//
+// --------------------------------------------------
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Solution {
+public:
+    bool isMatch(string s, string p) {
+        int m = s.length();
+        int n = p.length();
+
+        // dp[i][j] 代表：字符串 s 的前 i 个字符，和规律串 p 的前 j 个字符，能否匹配？
+        // 多开一格是为了处理空字符串的情况（0个字符）
+        vector<vector<bool>> dp(m + 1, vector<bool>(n + 1, false));
+
+        // 1. 初始化起点：空字符串和空规律串，肯定能匹配
+        dp[0][0] = true;
+
+        // 2. 初始化第一行：s 是空字符串，但 p 不是空的情况
+        // 比如 s="", p="a*b*"。因为 a* 和 b* 都可以当作 0 次，所以能匹配空串
+        for (int j = 1; j <= n; j++) {
+            if (p[j - 1] == '*') {
+                // 如果遇到 '*'，它可以把前面那个字符直接废弃掉（宇宙A：选0次）
+                // 所以它能不能匹配，取决于它前面两格的状态
+                dp[0][j] = dp[0][j - 2]; 
+            }
+        }
+
+        // 3. 开始填表（双重循环遍历所有的平行宇宙）
+        // i 从 1 到 m (遍历怪物 s)
+        // j 从 1 到 n (遍历卡牌 p)
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                
+                // 【情况一】当前卡牌是普通字母 或 '.' (不是 '*')
+                if (p[j - 1] == s[i - 1] || p[j - 1] == '.') {
+                    // 只要当前这俩长得一样，现在的命运就取决于他们前面那些字符能不能匹配
+                    dp[i][j] = dp[i - 1][j - 1];
+                } 
+                
+                // 【情况二】当前卡牌是 '*'（进入平行宇宙）
+                else if (p[j - 1] == '*') {
+                    
+                    // 宇宙 A（丢弃大法）：我不管三七二十一，直接让 '*' 和它前面的字符作废（用 0 次）
+                    // 命运取决于：当前的怪物 s[i]，和没用这张组合卡之前的 p[j-2] 能不能匹配
+                    dp[i][j] = dp[i][j - 2];
+
+                    // 宇宙 B（贪吃大法）：前提是怪物的样子，刚好等于 '*' 前面那张卡的样子（或者是 '.'）
+                    if (p[j - 2] == s[i - 1] || p[j - 2] == '.') {
+                        // 如果满足前提，'*' 就可以吃掉当前这个怪物 s[i-1]。
+                        // 因为 '*' 吃完不会消失，所以命运取决于：没吃这个怪物之前(i-1)，卡牌 '*' 能不能顶得住。
+                        // 只要宇宙 A 或 宇宙 B 有一个能赢（用 || 符号），这局就算赢
+                        dp[i][j] = dp[i][j] || dp[i - 1][j];
+                    }
+                }
+            }
+        }
+
+        // 右下角最后一个格子，就是全部怪物和全部卡牌的最终命运
+        return dp[m][n];
+    }
+};
