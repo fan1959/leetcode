@@ -1,12 +1,13 @@
 // LeetCode Solution: Longest Valid Parentheses
 // Runtime: 3 ms | Memory: 11.7 MB
 // Tags: Stack, String, Dynamic Programming
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 枚举所有子串判断是否合法括号。
+//   - 问题所在: O(n²) 或 O(n³) 必定超时。
+//   - 改进方法: 栈或 DP：栈做法是左括号索引入栈，遇到右括号弹出，计算当前有效长度；DP 是找 '()' 和 '(...)' 模式递推。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(n)
 //
 // --------------------------------------------------
 
@@ -28,3 +29,4 @@ public:
         return maxans;
     }
 };
+

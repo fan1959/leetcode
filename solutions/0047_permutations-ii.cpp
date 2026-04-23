@@ -1,12 +1,13 @@
-// LeetCode Solution: Permutations II
+// LeetCode Solution: Permutations Ii
 // Runtime: 0 ms | Memory: 11 MB
 // Tags: Array, Backtracking, Sorting
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 先生成所有排列再去重。
+//   - 问题所在: 去重开销大。
+//   - 改进方法: 排序后回溯 + 跳过同层相同值：同一位置不能重复选相同的数。
+//   - 时间复杂度: O(n!)
+//   - 空间复杂度: O(n)
 //
 // --------------------------------------------------
 

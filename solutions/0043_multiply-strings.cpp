@@ -1,12 +1,13 @@
 // LeetCode Solution: Multiply Strings
 // Runtime: 3 ms | Memory: 9.5 MB
 // Tags: Math, String, Simulation
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 转整数相乘再转字符串。
+//   - 问题所在: 可能溢出。
+//   - 改进方法: 模拟竖式乘法：按位相乘叠加到结果数组，num1[i]*num2[j] 结果加到 res[i+j]。
+//   - 时间复杂度: O(mn)
+//   - 空间复杂度: O(m+n)
 //
 // --------------------------------------------------
 

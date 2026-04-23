@@ -1,12 +1,13 @@
-// LeetCode Solution: Jump Game II
+// LeetCode Solution: Jump Game Ii
 // Runtime: 0 ms | Memory: 20 MB
 // Tags: Greedy, Array, Dynamic Programming
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: BFS 求最少步数。
+//   - 问题所在: BFS O(n²) 且队列开销大。
+//   - 改进方法: 贪心：在每步可达范围内找最远覆盖位置，步数+1，更新边界。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

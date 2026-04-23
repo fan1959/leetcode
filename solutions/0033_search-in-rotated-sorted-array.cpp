@@ -1,12 +1,13 @@
-// LeetCode Solution: Search in Rotated Sorted Array
+// LeetCode Solution: Search In Rotated Sorted Array
 // Runtime: 0 ms | Memory: 14.8 MB
 // Tags: Array, Binary Search
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 直接遍历 O(n)，或者先复原再二分。
+//   - 问题所在: 复原需要找到旋转点，两次二分可以，但有更直接的方法。
+//   - 改进方法: 单次二分：比较 nums[mid] 和 target 与首元素的关系，判断哪半边有序，再决定搜索区间。
+//   - 时间复杂度: O(log n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

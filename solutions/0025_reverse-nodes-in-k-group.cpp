@@ -1,12 +1,13 @@
-// LeetCode Solution: Reverse Nodes in k-Group
+// LeetCode Solution: Reverse Nodes In K Group
 // Runtime: 0 ms | Memory: 16.3 MB
 // Tags: Recursion, Linked List
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 每 k 个节点反转一次。
+//   - 问题所在: 需要正确处理反转后链表的链接。
+//   - 改进方法: 递归：先统计 k 个节点是否存在，不足则返回；反转这 k 个节点，递归处理后续，链接首尾。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

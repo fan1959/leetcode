@@ -1,12 +1,13 @@
 // LeetCode Solution: Zigzag Conversion
 // Runtime: 3 ms | Memory: 13.9 MB
 // Tags: String
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 按行存储，用方向标志控制何时向下何时向上。
+//   - 问题所在: 直接模拟可以，但可以通过数学关系直接计算每行字符。
+//   - 改进方法: 维护当前行和方向，按 Z 字形走完所有字符后拼接各行。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(n)
 //
 // --------------------------------------------------
 

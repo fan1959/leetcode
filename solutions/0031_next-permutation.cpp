@@ -1,12 +1,13 @@
 // LeetCode Solution: Next Permutation
 // Runtime: 0 ms | Memory: 15.4 MB
 // Tags: Array, Two Pointers
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 生成所有排列取下一个。
+//   - 问题所在: 排列数指数级爆炸。
+//   - 改进方法: 从后往前找第一个递减对 (i,i-1)，再从后找第一个大于 nums[i-1] 的数交换，末尾反转升序。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

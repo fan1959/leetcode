@@ -1,12 +1,13 @@
-// LeetCode Solution: Letter Combinations of a Phone Number
+// LeetCode Solution: Letter Combinations Of A Phone Number
 // Runtime: 0 ms | Memory: 9.3 MB
 // Tags: Hash Table, String, Backtracking
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 递归生成所有组合。
+//   - 问题所在: -
+//   - 改进方法: 回溯（DFS）：每层代表一个数字，映射到字母列表，依次选择每个字母递归深入。
+//   - 时间复杂度: O(4^n)
+//   - 空间复杂度: O(n)
 //
 // --------------------------------------------------
 

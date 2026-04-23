@@ -1,12 +1,13 @@
 // LeetCode Solution: Regular Expression Matching
 // Runtime: 4 ms | Memory: 8.9 MB
 // Tags: Recursion, String, Dynamic Programming
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 递归枚举所有匹配可能。
+//   - 问题所在: 指数级复杂度，无记忆化会重复计算。
+//   - 改进方法: 动态规划，dp[i][j] 表示 s[:i] 和 p[:j] 是否匹配，'*' 号通过 dp[i][j-2] 和扩展匹配递推。
+//   - 时间复杂度: O(mn)
+//   - 空间复杂度: O(mn)
 //
 // --------------------------------------------------
 

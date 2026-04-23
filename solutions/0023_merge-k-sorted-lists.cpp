@@ -1,12 +1,13 @@
-// LeetCode Solution: Merge k Sorted Lists
+// LeetCode Solution: Merge K Sorted Lists
 // Runtime: 3 ms | Memory: 18.8 MB
 // Tags: Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: (待补充)
+//   - 问题所在: (待补充)
+//   - 改进方法: (待补充)
+//   - 时间复杂度: (待补充)
+//   - 空间复杂度: (待补充)
 //
 // --------------------------------------------------
 

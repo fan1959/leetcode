@@ -1,12 +1,13 @@
-// LeetCode Solution: Median of Two Sorted Arrays
+// LeetCode Solution: Median Of Two Sorted Arrays
 // Runtime: 7 ms | Memory: 93.6 MB
 // Tags: Array, Binary Search, Divide and Conquer
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 合并两个有序数组后直接取中位数。
+//   - 问题所在: 合并需要 O(m+n) 额外空间，不够优雅。
+//   - 改进方法: 二分搜索切分点，通过比较左右分割边界排除不可能的区间，复杂度 O(log(m+n))。
+//   - 时间复杂度: O(log(m+n))
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

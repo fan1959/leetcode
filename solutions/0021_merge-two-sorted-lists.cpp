@@ -1,12 +1,13 @@
 // LeetCode Solution: Merge Two Sorted Lists
 // Runtime: 3 ms | Memory: 19.2 MB
 // Tags: Recursion, Linked List
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 合并两个链表，遍历比较节点大小。
+//   - 问题所在: -
+//   - 改进方法: 用哨兵节点简化边界处理，逐个比较两个链表的节点，依次链接较小者。
+//   - 时间复杂度: O(m+n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

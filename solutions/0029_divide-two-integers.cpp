@@ -1,12 +1,13 @@
 // LeetCode Solution: Divide Two Integers
 // Runtime: 0 ms | Memory: 8.6 MB
 // Tags: Bit Manipulation, Math
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 累减被除数，统计次数。
+//   - 问题所在: 可能减很多次，效率极低。
+//   - 改进方法: 倍增思想：用除数不断左移（乘2），逼近被除数，减少迭代次数（二进制除法）。
+//   - 时间复杂度: O(log |dividend| / |divisor|)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

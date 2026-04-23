@@ -1,34 +1,40 @@
 // LeetCode Solution: Sudoku Solver
-// Runtime: 124 ms | Memory: 8.7 MB
+// Runtime: 103 ms | Memory: 8.6 MB
 // Tags: Array, Hash Table, Backtracking, Matrix
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 暴力填数字，验证合法性。
+//   - 问题所在: 搜索空间极大 9^81。
+//   - 改进方法: 回溯 + 剪枝：先填可选数字最少的空格（MRV 启发式），每次填入验证，遇到冲突回溯。
+//   - 时间复杂度: O(9^m)
+//   - 空间复杂度: O(m)
 //
 // --------------------------------------------------
 
 class Solution {
 public:
-    bool rows[9][10];
-    bool cols[9][10];
-    bool boxes[9][10];
-    bool saveboard(vector<vector<char>>& board){
+    int rows[9][10]={0};
+    int cols[9][10]={0};
+    int boxes[9][10]={0};
+    bool save(vector<vector<char>>& board){
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
                 if(board[i][j]=='.'){
-                    int boardindex=i/3*3+j/3;
                     for(int num=1;num<=9;num++){
-                        if(!rows[i][num] && !cols[j][num] && !boxes[boardindex][num]){
+                        int boxesindex=i/3*3+j/3;
+                        if(rows[i][num]!=1 && cols[j][num]!=1 && boxes[boxesindex][num]!=1 ){
                             board[i][j]=num+'0';
-                            rows[i][num]=cols[j][num]=boxes[boardindex][num]=true;
-                            if(saveboard(board)){
-                                return true;
-                            }
-                            board[i][j]='.';
-                            rows[i][num]=cols[j][num]=boxes[boardindex][num]=false;
+                            rows[i][num]+=1;
+                            cols[j][num]+=1;
+                            boxes[boxesindex][num]+=1;
+                        
+                        if(save(board)){
+                            return true;
+                        }
+                        board[i][j]='.';
+                        rows[i][num]-=1;
+                        cols[j][num]-=1;
+                        boxes[boxesindex][num]-=1;
                         }
                     }
                     return false;
@@ -39,19 +45,16 @@ public:
     }
     void solveSudoku(vector<vector<char>>& board) {
         for(int i=0;i<9;i++){
-            for(int j=0;j<10;j++){
-                rows[i][j]=cols[i][j]=boxes[i][j]=false;
-            }
-        }
-        for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
                 if(board[i][j]!='.'){
-                    int boxesindex=i/3*3+j/3;
                     int num=board[i][j]-'0';
-                    rows[i][num]=cols[j][num]=boxes[boxesindex][num]=true;
+                    int boxesindex=i/3*3+j/3;
+                    rows[i][num]++;
+                    cols[j][num]++;
+                    boxes[boxesindex][num]++;
                 }
             }
         }
-        saveboard(board);
+        save(board);
     }
 };

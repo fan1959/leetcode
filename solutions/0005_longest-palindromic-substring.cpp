@@ -1,12 +1,13 @@
 // LeetCode Solution: Longest Palindromic Substring
 // Runtime: 16 ms | Memory: 9.3 MB
 // Tags: Two Pointers, String, Dynamic Programming
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 枚举所有子串，判断是否回文，取最长。
+//   - 问题所在: 子串数量 O(n²)，判断回文 O(n)，总体 O(n³) 超时。
+//   - 改进方法: 中心扩展法，以每个位置为中心向两边扩展，时间 O(n²)；或 Manacher 算法 O(n)。
+//   - 时间复杂度: O(n²)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

@@ -1,12 +1,13 @@
 // LeetCode Solution: Same Tree
 // Runtime: 0 ms | Memory: 12.5 MB
 // Tags: Tree, Depth-First Search, Breadth-First Search, Binary Tree
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 同时遍历两棵树，比较每个节点。
+//   - 问题所在: -
+//   - 改进方法: 递归：两树都空返回 true；根节点不等返回 false；递归比较左右子树。
+//   - 时间复杂度: O(min(m,n))
+//   - 空间复杂度: O(min(m,n))
 //
 // --------------------------------------------------
 

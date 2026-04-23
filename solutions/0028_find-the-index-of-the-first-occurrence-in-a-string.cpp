@@ -1,12 +1,13 @@
-// LeetCode Solution: Find the Index of the First Occurrence in a String
+// LeetCode Solution: Find The Index Of The First Occurrence In A String
 // Runtime: 0 ms | Memory: 8.9 MB
 // Tags: Two Pointers, String, String Matching
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: (待补充)
+//   - 问题所在: (待补充)
+//   - 改进方法: (待补充)
+//   - 时间复杂度: (待补充)
+//   - 空间复杂度: (待补充)
 //
 // --------------------------------------------------
 

@@ -1,12 +1,13 @@
 // LeetCode Solution: Add Two Numbers
 // Runtime: 2 ms | Memory: 75.4 MB
 // Tags: Recursion, Linked List, Math
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 将两个链表看成数值，直接相加后重建链表。
+//   - 问题所在: 数值可能超出整型范围，不能简单转数值。
+//   - 改进方法: 按位逐个相加，用 carry 处理进位，保持链表结构同时遍历两条链表。
+//   - 时间复杂度: O(max(m,n))
+//   - 空间复杂度: O(max(m,n))
 //
 // --------------------------------------------------
 

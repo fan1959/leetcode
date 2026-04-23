@@ -1,12 +1,13 @@
 // LeetCode Solution: Validate Binary Search Tree
 // Runtime: 0 ms | Memory: 21.6 MB
 // Tags: Tree, Depth-First Search, Binary Search Tree, Binary Tree
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 检查每个节点是否在合法范围内（递归）。
+//   - 问题所在: 不能只看左右子节点，需要传递上下界。
+//   - 改进方法: 递归时传递 (min, max) 边界约束，或者用中序遍历检查是否严格递增。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(h)
 //
 // --------------------------------------------------
 

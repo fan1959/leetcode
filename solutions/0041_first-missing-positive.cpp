@@ -1,12 +1,13 @@
 // LeetCode Solution: First Missing Positive
 // Runtime: 3 ms | Memory: 53.7 MB
 // Tags: Array, Hash Table
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 把数组排序后遍历找最小缺失正数。
+//   - 问题所在: 排序 O(n log n)，且会改变数组相对顺序。
+//   - 改进方法: 原地哈希：将数字 i 放到下标 i-1 的位置（仅处理 1~n 范围内的数），最后遍历第一个位置不对应的就是答案。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

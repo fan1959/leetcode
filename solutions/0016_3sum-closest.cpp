@@ -1,12 +1,13 @@
 // LeetCode Solution: 3Sum Closest
 // Runtime: 15 ms | Memory: 13.8 MB
 // Tags: Array, Two Pointers, Sorting
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 三层枚举找最接近 target 的三元组。
+//   - 问题所在: O(n³) 效率低。
+//   - 改进方法: 排序后双指针，固定一个数，移动双指针逼近 target，维护最近距离。
+//   - 时间复杂度: O(n²)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

@@ -1,12 +1,13 @@
-// LeetCode Solution: Swap Nodes in Pairs
+// LeetCode Solution: Swap Nodes In Pairs
 // Runtime: 0 ms | Memory: 11.1 MB
 // Tags: Recursion, Linked List
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 将链表转数组，按奇偶交换后再重建链表。
+//   - 问题所在: 多占空间，不够优雅。
+//   - 改进方法: 递归或迭代：两两交换相邻节点，关键是指向翻转后的节点。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

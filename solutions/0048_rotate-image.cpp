@@ -1,12 +1,13 @@
 // LeetCode Solution: Rotate Image
 // Runtime: 0 ms | Memory: 10.1 MB
 // Tags: Array, Math, Matrix
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 新建矩阵按旋转后的位置填入。
+//   - 问题所在: 多占 O(n²) 空间。
+//   - 改进方法: 原地旋转：先转置矩阵，再翻转每行；或按四个角交换对应元素。
+//   - 时间复杂度: O(n²)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

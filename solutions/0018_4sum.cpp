@@ -1,12 +1,13 @@
 // LeetCode Solution: 4Sum
 // Runtime: 35 ms | Memory: 17.2 MB
 // Tags: Array, Two Pointers, Sorting
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 四层枚举。
+//   - 问题所在: O(n⁴) 必然超时。
+//   - 改进方法: 排序后双指针 + 两数之和：固定两个数，双指针找另外两个，排序去重。
+//   - 时间复杂度: O(n³)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

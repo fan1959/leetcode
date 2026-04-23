@@ -1,12 +1,13 @@
 // LeetCode Solution: Valid Parentheses
 // Runtime: 0 ms | Memory: 8.7 MB
 // Tags: Stack, String
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 用栈记录左括号，遇见右括号时弹出匹配。
+//   - 问题所在: -
+//   - 改进方法: 遇到左括号入栈，遇到右括号弹出并检查是否匹配，最后栈空则合法。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(n)
 //
 // --------------------------------------------------
 

@@ -1,12 +1,13 @@
 // LeetCode Solution: Group Anagrams
 // Runtime: 19 ms | Memory: 24.5 MB
 // Tags: Array, Hash Table, String, Sorting
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 枚举所有字符串的排列，判断是否相同。
+//   - 问题所在: 排列判断 O(k!) 极慢。
+//   - 改进方法: 排序字符串作 key（或用字符计数数组），哈希表分组。
+//   - 时间复杂度: O(n·k·logk)
+//   - 空间复杂度: O(n·k)
 //
 // --------------------------------------------------
 

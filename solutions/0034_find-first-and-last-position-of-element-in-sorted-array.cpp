@@ -1,12 +1,13 @@
-// LeetCode Solution: Find First and Last Position of Element in Sorted Array
+// LeetCode Solution: Find First And Last Position Of Element In Sorted Array
 // Runtime: 0 ms | Memory: 17.1 MB
 // Tags: Array, Binary Search
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 遍历找左右边界。
+//   - 问题所在: O(n)。
+//   - 改进方法: 两次二分：分别找 target 首次出现位置和末次出现位置（通过找 target+1 的首次位置减1）。
+//   - 时间复杂度: O(log n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

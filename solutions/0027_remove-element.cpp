@@ -1,12 +1,13 @@
 // LeetCode Solution: Remove Element
 // Runtime: 0 ms | Memory: 11.5 MB
 // Tags: Array, Two Pointers
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 新建数组保存不需要移除的元素。
+//   - 问题所在: 多占空间。
+//   - 改进方法: 双指针原地交换，慢指针记录新数组尾部，快指针遍历发现不等于 val 时赋值给慢指针位置。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

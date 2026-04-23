@@ -1,12 +1,13 @@
 // LeetCode Solution: Search Insert Position
 // Runtime: 0 ms | Memory: 13.4 MB
 // Tags: Array, Binary Search
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 遍历找插入位置。
+//   - 问题所在: O(n)。
+//   - 改进方法: 二分查找，找 target 或第一个大于 target 的位置。
+//   - 时间复杂度: O(log n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

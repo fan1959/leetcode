@@ -1,12 +1,13 @@
-// LeetCode Solution: String to Integer (atoi)
+// LeetCode Solution: String To Integer Atoi
 // Runtime: 0 ms | Memory: 9.1 MB
 // Tags: String
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 逐字符解析，累加数字。
+//   - 问题所在: 需要处理前导空格、正负号、溢出、非数字字符。
+//   - 改进方法: 状态机处理：跳过空格 → 读符号 → 读数字序列 → 溢出检测。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

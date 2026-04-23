@@ -1,12 +1,13 @@
 // LeetCode Solution: Trapping Rain Water
 // Runtime: 3 ms | Memory: 26.7 MB
 // Tags: Stack, Array, Two Pointers, Dynamic Programming, Monotonic Stack
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 枚举每个位置，找左右最高后计算。
+//   - 问题所在: O(n²)。
+//   - 改进方法: 双指针：左右指针向中间移动，根据左右最大高度差计算每个位置的水量。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 

@@ -1,12 +1,13 @@
-// LeetCode Solution: Remove Duplicates from Sorted Array
+// LeetCode Solution: Remove Duplicates From Sorted Array
 // Runtime: 0 ms | Memory: 22.1 MB
 // Tags: Array, Two Pointers
-// --------------------------------------------------
-// Personal Approach Notes:
-//   - Approach: [Solution strategy and key ideas]
-//   - Time Complexity: [O(...) - analyze]
-//   - Space Complexity: [O(...) - analyze]
-//   - Key Insights: [Observations and potential pitfalls]
+//
+// 个人解题思路：
+//   - 初始思路: 用集合去重后重建数组。
+//   - 问题所在: 集合额外空间，且破坏了相对顺序。
+//   - 改进方法: 双指针，快指针遍历发现不同元素时慢指针前移并赋值，时间 O(n)，原地修改。
+//   - 时间复杂度: O(n)
+//   - 空间复杂度: O(1)
 //
 // --------------------------------------------------
 
